@@ -43,9 +43,9 @@ function Find() {
       });
   };
 
-  // Re-fetch when any filter changes
   useEffect(() => {
     fetchItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery, selectedType, selectedCategory, selectedStatus]);
 
   const override = {

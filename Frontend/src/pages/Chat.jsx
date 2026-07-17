@@ -29,6 +29,7 @@ export default function Chat() {
 
   useEffect(() => {
     fetchPartners();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Set default partner if navigated from details page
@@ -48,6 +49,7 @@ export default function Chat() {
     if (activePartner) {
       fetchChatHistory(activePartner.id);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activePartner]);
 
   // Connect to WebSockets
